@@ -165,7 +165,7 @@ If either engine influence is weak, regenerate.
 
 - Shorter + Frisell
 - Shorter + Slonimsky
-- Shorter + Zappa (limited)
+- Shorter + Zappa (secondary or hybrid — limited sections)
 - Frisell + Counterpoint
 - Tonality Vault + Counterpoint
 - Hill + Slonimsky
@@ -174,14 +174,29 @@ If either engine influence is weak, regenerate.
 
 ## Secondary Engine Support (Zappa)
 
-Zappa may be used as a **secondary engine only** (not primary). It contributes:
+Zappa may function as:
 
-- Unexpected ensemble hits
-- Rhythmic disruption
-- Angular voicings
-- Sudden dynamics
+- **Secondary engine** (paired with a primary)
+- **Hybrid partner** (in hybrid combinations)
 
-**Usage:** 1–3 gestures per piece, typically in a designated "fractured" section.
+### Allowed Contributions
+
+- Ensemble hits
+- Rhythmic fractures
+- Harmonic collisions
+- Orchestral accents
+
+### Restrictions
+
+- May **not** dominate the piece
+- Must **not** replace the primary engine structure
+- Should appear in **limited sections** only
+
+### Recommended Usage
+
+- Development section
+- Climax section
+- Contrasting episode
 
 **Example:** Sylva Fracture — Wayne Shorter primary, Zappa secondary (section E only).
 
@@ -309,7 +324,7 @@ Each composition must contain:
 | Primary | Secondary | Use Case |
 |---------|-----------|----------|
 | Wayne Shorter | Frisell | Narrative + spacious |
-| Wayne Shorter | Zappa | Narrative + fractured moments |
+| Wayne Shorter | Zappa | Narrative + ensemble hits, rhythmic fractures, harmonic collisions |
 | Wayne Shorter | Slonimsky | Narrative + angular intervals |
 | Frisell | Counterpoint | Atmospheric + contrapuntal |
 | Tonality Vault | Counterpoint | Large-scale + string-driven |
@@ -322,6 +337,9 @@ Each composition must contain:
 
 | Resource | Path |
 |----------|------|
+| Four-Engine Album Plan | `docs/album_engine_plan.md` |
+| Composition Engine Reference Manual | `docs/composition_engine_reference.md` |
+| Docs index | `docs/index.md` |
 | Engine menu | `prompts/engine_menu.md` |
 | New composition template | `prompts/new_composition_template.md` |
 | Start new piece helper | `tools/start_new_piece.md` |
@@ -332,6 +350,9 @@ Each composition must contain:
 | Dual engine mode | `rules/dual-engine-composition-mode.md` |
 | Wayne Shorter engine | `rules/wayne-shorter-composition-engine.md` |
 | Score readability standard | `rules/score-readability-standard.md` |
+| MusicXML engraving standard | `rules/musicxml-engraving-standard.md` |
+| MusicXML pre-export validation | `rules/musicxml-pre-export-validation.md` |
+| One piece – one folder | `rules/one-piece-one-folder.md` |
 | Guitar-first rule | `rules/guitar-first-composition-rule.md` |
 | Anti-monotony rule | `rules/anti-monotony-composition-rule.md` |
 | Structural evolution engine | `rules/structural-evolution-engine.md` |

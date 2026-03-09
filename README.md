@@ -25,6 +25,10 @@ The music is written for real players in collaboration with the **Sylva Quartet*
 
 Future compositions in this repo are generated using a **guitar-first chamber-jazz logic**: the guitar's harmonic and rhythmic identity drives the piece, and the string quartet is built in response to it. See `rules/guitar-first-composition-rule.md`.
 
+**Four-Engine Album Plan:** The album architecture is defined by four primary engines (Frisell Atmosphere, Wayne Shorter Narrative, Scofield–Holland Groove, Counterpoint / Tonality Hybrid) plus optional Zappa secondary. See `docs/album_engine_plan.md`.
+
+**Composition Engine Reference Manual:** Central rulebook for all composition engines, score standards, and validation rules. See `docs/composition_engine_reference.md`.
+
 ## Aesthetic Orientation
 
 Chamber jazz inspired by Bill Frisell’s string work (Richter 858, Sign of Life, Big Sur, When You Wish Upon a Star). Key characteristics:
@@ -41,7 +45,7 @@ Chamber jazz inspired by Bill Frisell’s string work (Richter 858, Sign of Life
 ## Repository Structure
 
 ```
-docs/           — Album concept, workflow, style guide, listening references
+docs/           — Album concept, Four-Engine Album Plan, Composition Engine Reference Manual, workflow, style guide
 prompts/        — Master composition engine, MusicXML, arrangement, revision templates
 rules/          — Instrumentation, texture, harmony, rhythm, anti-generic, engraving, GCE rubric
 compositions/   — Individual works (each as a folder from composition-template)
