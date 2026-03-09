@@ -1,6 +1,6 @@
 # Guitar–String Quartet Composition Engine Guide
 
-**Version 2.0**  
+**Version 2.1**  
 **Last updated:** 2026-03-09
 
 This guide documents the composition engine system, rules, and score standards for the guitar-string-quartet repository. It is synchronized with `rules/`, `prompts/`, and engine implementations.
@@ -10,7 +10,8 @@ This guide documents the composition engine system, rules, and score standards f
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Available Engines](#available-engines)
+2. [Composition Engine Menu](#composition-engine-menu)
+3. [Available Engines](#available-engines)
 3. [Dual Engine Mode](#dual-engine-mode)
 4. [Secondary Engine Support (Zappa)](#secondary-engine-support-zappa)
 5. [Hybrid Engine](#hybrid-engine)
@@ -28,6 +29,23 @@ The composition system supports multiple engines that determine harmonic, melodi
 **Primary ensemble:** Guitar, Violin I, Violin II, Viola, Cello
 
 **Core principle:** Guitar-first generation — guitar harmonic vocabulary is generated before strings; strings respond to, frame, or contrast with guitar material.
+
+---
+
+## Composition Engine Menu
+
+New pieces should begin by selecting an engine from the engine menu rather than writing prompts manually.
+
+**Workflow:**
+1. Open `prompts/engine_menu.md`
+2. Choose an engine (single or dual-engine pairing)
+3. Copy `prompts/new_composition_template.md`
+4. Fill in the fields (piece name, key, tempo, form, motif seed, etc.)
+5. Run the composition generation
+
+**Engine menu options:** Frisell Atmosphere, Wayne Shorter, Slonimsky Harmonic, Andrew Hill, Counterpoint, Tonality Vault, Hybrid, Wayne Shorter + Zappa, Frisell + Counterpoint, Shorter + Slonimsky.
+
+**Helper:** See `tools/start_new_piece.md` for step-by-step instructions.
 
 ---
 
@@ -304,6 +322,9 @@ Each composition must contain:
 
 | Resource | Path |
 |----------|------|
+| Engine menu | `prompts/engine_menu.md` |
+| New composition template | `prompts/new_composition_template.md` |
+| Start new piece helper | `tools/start_new_piece.md` |
 | Master composition engine | `prompts/master-composition-engine.md` |
 | MusicXML generation template | `prompts/musicxml-generation-template.md` |
 | Engine choices (quick reference) | `docs/Engine Choices.md` |

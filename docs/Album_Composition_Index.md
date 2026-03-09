@@ -47,6 +47,7 @@ Engines allowed:
 When a new composition is created or a new version is exported:
 
 1. Add or update the row in the table above
-2. Sort alphabetically by composition title
-3. Extract key from MusicXML (`<fifths>`) or lead-sheet when available
-4. Record the latest MusicXML filename (highest version number wins)
+2. Record the engine used (from engine menu selection)
+3. Sort alphabetically by composition title
+4. Extract key from MusicXML (`<fifths>`) or lead-sheet when available
+5. Record the latest MusicXML filename (highest version number wins)
