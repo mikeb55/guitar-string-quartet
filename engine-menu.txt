@@ -1,0 +1,30 @@
+Launch Guitar-String-Quartet Engine — Menu Guide
+
+1. Open master engine prompt
+   Opens prompts/master-composition-engine.md in your default editor.
+   This is the central composition engine for the repository.
+
+2. Open repo README
+   Opens README.md at the repository root.
+
+3. Open composition index
+   Opens compositions/_index.md — the index of all compositions and how to add new ones.
+
+4. Create new composition request template
+   Creates or overwrites current-engine-request.md in the repo root with a starter template.
+   Fill in the fields and paste into Cursor when invoking the engine.
+
+5. Open engine request templates
+   Opens engine-request-templates.txt — ready-to-copy request templates for different engine modes.
+
+6. Open current compositions folder
+   Opens the compositions folder in Windows Explorer.
+
+7. Open rules folder
+   Opens the rules folder in Windows Explorer.
+
+8. Open prompts folder
+   Opens the prompts folder in Windows Explorer.
+
+9. Exit
+   Closes the launcher.

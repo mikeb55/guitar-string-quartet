@@ -1,0 +1,95 @@
+========================================
+Guitar-String-Quartet Engine Request Templates
+========================================
+
+Copy the template you need and paste into Cursor with the master engine prompt.
+Reference: prompts/master-composition-engine.md
+
+========================================
+A. New composition
+========================================
+
+Mode: New composition
+Piece name:
+Seed: Motivic + harmonic field
+Tonality: Lydian suspended field
+Form: A-B chamber form
+Duration: 3-5 minutes
+Texture: Dark trio subset
+Counterline: Contrary motion + fragment echo
+Rhythm: Spacious and suspended
+Guitar role: Shared melodic voice
+Improvisation: Brief guitar window
+Evolution: Gradual bloom
+Output: Arrangement plan
+
+========================================
+B. Expand existing composition
+========================================
+
+Mode: Expand existing composition
+Piece name:
+Section to expand:
+Seed: [retain existing or add]
+Tonality: [retain]
+Texture: [specify new texture for expansion]
+Counterline: [add type if applicable]
+Output: Lead sheet / Arrangement plan / Full score
+
+========================================
+C. Generate arrangement plan
+========================================
+
+Mode: Generate arrangement plan
+Piece name:
+Use existing lead sheet: yes
+Texture models: [e.g. Dark trio, Guitar + viola duet, Split-register bloom]
+Evolution: [e.g. Gradual bloom, Dissolution]
+Output: Arrangement plan
+
+========================================
+D. Generate counterlines
+========================================
+
+Mode: Generate counterlines
+Piece name:
+Section:
+Counterline types: Shadow line + tension-bearing interior line
+Melody protection: yes
+Voice independence: Violin II, Viola as primary interior generators
+Output: Counterlines for [section]
+
+========================================
+E. Generate MusicXML
+========================================
+
+Mode: Generate MusicXML
+Piece name:
+Use existing notes: yes
+Target: full score
+Density: trio floor with one full bloom section
+Output: MusicXML
+
+Note: GCE >= 9.0 required before MusicXML output.
+
+========================================
+F. Evaluate existing piece
+========================================
+
+Mode: Evaluate existing piece
+Piece name:
+Output: GCE evaluation report
+
+Evaluate: melodic identity, harmonic clarity, voice independence, ensemble interaction, texture control, emotional resonance, originality, formal coherence, idiomatic playability, motivic integration.
+
+========================================
+G. Re-orchestrate existing material
+========================================
+
+Mode: Re-orchestrate existing material
+Piece name:
+Section:
+Current texture:
+Target texture: [e.g. Split-register bloom, Guitar + cello counterpoint]
+Preserve: motivic material, harmonic field
+Output: Re-orchestrated section

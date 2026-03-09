@@ -1,0 +1,31 @@
+# OS clutter
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Temporary / cache
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+.cache/
+*.cache
+
+# IDE / editor
+.idea/
+.vscode/
+*.sublime-*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+venv/
+.venv/
+*.egg-info/
+.eggs/
+
+# Do NOT ignore composition assets:
+# .sib, .musicxml, .xml, .pdf, .mp4, .wmv, .mov, .wav, .mp3, .flac, .aif, .aiff, .md
