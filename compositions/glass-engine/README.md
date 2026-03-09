@@ -10,14 +10,24 @@ In development — multiple MusicXML versions available.
 
 | Type | Files |
 |------|-------|
-| MusicXML | V3, v2, v3_gce9, regenerated |
-| Archive | regenerated - Copy (duplicate) |
+| MusicXML | V3–V8 |
+| Archive | older versions |
 
 ## Latest Recommended File
 
-**Open first:** `musicxml/V3glass_engine_guitar_string_quartet.musicxml`
+**Open first:** `musicxml/V8glass_engine_guitar_string_quartet.musicxml`
 
-V3: structural evolution rewrite with stronger guitar harmony and reduced repetition. Use v3_gce9, regenerated, or v2 for comparison.
+V8: Readability upgrade — boxed rehearsal letters (A–H), chord symbols, tempo marking, double barlines at section changes.
+
+## Readability Status
+
+| Element | Present |
+|---------|---------|
+| Chord symbols | Yes |
+| Boxed rehearsal letters | Yes (A–H) |
+| Double barlines | At section changes |
+| Tempo marking | Yes (q = 66) |
+| Dynamics | At texture changes |
 
 ## Instrumentation
 

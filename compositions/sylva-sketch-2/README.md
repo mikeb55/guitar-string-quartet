@@ -6,6 +6,15 @@ Guitar and string quartet. Engine: Andrew Hill — angular motif, chromatic pivo
 
 In development — MusicXML generated.
 
+## Readability Status
+
+| Element | Present |
+|---------|---------|
+| Chord symbols | Needs verification |
+| Boxed rehearsal letters | Needs verification |
+| Double barlines | Needs verification |
+| Tempo marking | Needs verification |
+
 ## Available Files
 
 | Type | Files |

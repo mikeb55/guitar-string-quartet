@@ -1,7 +1,5 @@
 # Compositions Index
 
-**Album overview:** See `docs/Album_Composition_Index.md` for the full album composition index (key, engine, duration, latest version).
-
 ## Composition Logic
 
 **Guitar-first rule applies:** Generate guitar harmonic material first; build strings around it. See `rules/guitar-first-composition-rule.md`.
@@ -24,7 +22,6 @@
 
 4. **Generate MusicXML**
    - Use `prompts/musicxml-generation-template.md`
-   - Apply score readability standard (`rules/score-readability-standard.md`) — chord symbols, rehearsal letters, double barlines
    - Output to `[composition-folder]/musicxml/[title]_v01.musicxml`
 
 5. **Revise**
@@ -57,16 +54,15 @@
 
 ## Active Compositions
 
-| Folder | Title | Asset Types | Latest Version | Notes |
-|--------|-------|-------------|----------------|-------|
-| drift-study-no1 | Drift Study No1 | musicxml | drift_study_no1_guitar_string_quartet.musicxml |  |
-| drift-study-no1-guitar-string-quartet | Drift Study No1 Guitar String Quartet | sibelius video | drift_study_no1_guitar_string_quartet.sib |  |
-| eviscerating-angels | Eviscerating Angels | musicxml | Eviscerating_Angels.musicxml |  |
-| glass-engine | Glass Engine | archive musicxml sibelius | V7glass_engine_guitar_string_quartet.musicxml | Some files in archive |
-| sylva-fracture | Sylva Fracture | musicxml | Sylva_Fracture.musicxml | Wayne Shorter + Zappa |
-| sylva-narrative-no2 | Sylva Narrative No2 | musicxml | Sylva_Narrative_No2.musicxml |  |
-| sylva-sketch-2 | Sylva Sketch 2 | musicxml | Sylva_Sketch_2.musicxml |  |
-| working-title-01 |  | — | — |  |
+| Folder | Title | Asset Types | Latest Version | Readability |
+|--------|-------|-------------|----------------|-------------|
+| drift-study-no1 | Drift Study No.1 | musicxml sibelius video | drift_study_no1_guitar_string_quartet.musicxml | Partial |
+| eviscerating-angels | Eviscerating Angels | musicxml | V3Eviscerating_Angels.musicxml | Yes |
+| glass-engine | Glass Engine | archive musicxml sibelius | V8glass_engine_guitar_string_quartet.musicxml | Yes |
+| sylva-fracture | Sylva Fracture | musicxml | Sylva_Fracture.musicxml | Yes |
+| sylva-narrative-no2 | Sylva Narrative No.2 | musicxml | V5Sylva_Narrative_No2.musicxml | Partial |
+| sylva-sketch-2 | Sylva Sketch 2 | musicxml | Sylva_Sketch_2.musicxml | Needs verification |
+| working-title-01 | working-title-01 | — | — | — |
 | composition-template | (template) | — | — | Do not use for real compositions |
 
 ## TODO

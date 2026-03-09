@@ -8,6 +8,48 @@ All compositions follow **Anti-Monotony rules** to avoid repetitive textures and
 
 All MusicXML exports must follow the **Score Readability Standard** for professional rehearsal charts: chord symbols, boxed rehearsal letters, double barlines, tempo and dynamics. See `rules/score-readability-standard.md`.
 
+## Naming Conventions
+
+- **Folder names:** Lowercase, hyphenated (e.g. `glass-engine`, `drift-study-no1`, `sylva-narrative-no2`)
+- **No version suffixes** in folder names (e.g. do not create `glass-engine-v2`)
+- **No duplicate folders** (e.g. do not create `sylva-narrative-no2 - Copy`)
+
+## Version Conventions
+
+- **Version in filenames:** `V7glass_engine_guitar_string_quartet.musicxml`, `V3Eviscerating_Angels.musicxml`
+- **Increment on upgrade:** V7 → V8 when applying readability or structural changes
+- **Preserve history:** All versions in same folder; archive obsolete copies
+
+## Per-Piece Folder Logic
+
+All versions of the same piece live in one folder. Do not create separate top-level folders for versioned files.
+
+**Example:** All Glass Engine versions (V3–V8) go in `compositions/glass-engine/`, not `glass-engine-v7/` or `glass-engine-v8/`.
+
+## Future Export Rule
+
+**All future exports must go directly into the correct piece folder:**
+
+- MusicXML → `compositions/[piece-name]/musicxml/`
+- Sibelius → `compositions/[piece-name]/sibelius/`
+- PDF → `compositions/[piece-name]/pdf/`
+- Video → `compositions/[piece-name]/video/`
+- Audio → `compositions/[piece-name]/audio/`
+
+Do not dump new exports into `compositions/` root.
+
+## Readability Standards (Mandatory)
+
+Before exporting any MusicXML, verify:
+
+- **Chord symbols** above guitar staff
+- **Boxed rehearsal letters** (A, B, C, D, etc.) at section boundaries
+- **Double barlines** at major section changes
+- **Tempo marking** at beginning
+- **Dynamics** at major texture changes
+
+Run `py scripts/apply-readability-upgrades.py` to add boxed rehearsal letters to existing files.
+
 ## Folder Logic
 
 - **compositions/** — One folder per composition. All versions of the same piece live together.

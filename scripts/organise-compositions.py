@@ -19,8 +19,9 @@ from collections import defaultdict
 WORKSPACE = Path(__file__).resolve().parent.parent
 COMPOSITIONS = WORKSPACE / "compositions"
 
-# Folders to skip (templates, index)
+# Folders to skip (templates, index, duplicates)
 SKIP_FOLDERS = {"composition-template", ".git"}
+# Skip folders containing " - Copy" (duplicate folders)
 SKIP_FILES = {"_index.md"}
 
 # File type → subfolder mapping
@@ -153,6 +154,8 @@ def scan_composition_assets() -> dict[str, dict]:
 
     for item in COMPOSITIONS.iterdir():
         if not item.is_dir() or item.name in SKIP_FOLDERS or item.name.startswith("."):
+            continue
+        if " - Copy" in item.name:
             continue
 
         piece_name = item.name

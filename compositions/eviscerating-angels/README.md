@@ -10,11 +10,21 @@ In development — MusicXML generated.
 
 | Type | Files |
 |------|-------|
-| MusicXML | Eviscerating_Angels.musicxml |
+| MusicXML | V3Eviscerating_Angels.musicxml (latest) |
 
 ## Latest Recommended File
 
-**Open first:** `musicxml/Eviscerating_Angels.musicxml`
+**Open first:** `musicxml/V3Eviscerating_Angels.musicxml`
+
+## Readability Status
+
+| Element | Present |
+|---------|---------|
+| Chord symbols | Yes |
+| Boxed rehearsal letters | Yes (A–F) |
+| Double barlines | Yes |
+| Tempo marking | Yes |
+| Dynamics | Yes |
 
 ## Instrumentation
 

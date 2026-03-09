@@ -6,6 +6,16 @@ Dramatic narrative for guitar and string quartet. Primary: Wayne Shorter. Second
 
 In development — MusicXML generated.
 
+## Readability Status
+
+| Element | Present |
+|---------|---------|
+| Chord symbols | Yes (from music21 export) |
+| Boxed rehearsal letters | Yes |
+| Double barlines | Yes |
+| Tempo marking | Yes |
+| Dynamics | Yes |
+
 ## Engines
 
 - **Primary (Wayne Shorter):** Motif development, harmonic narrative, structural form

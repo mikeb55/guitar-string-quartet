@@ -31,14 +31,14 @@ Engines allowed:
 
 ## Composition Index
 
-| Title | Key | Engine | Duration | Tempo | Mood | Latest Version | Folder |
-|-------|-----|--------|----------|-------|------|----------------|--------|
-| Drift Study No.1 | C | Slonimsky / Motif | ~5 min | — | — | drift_study_no1_guitar_string_quartet | compositions/drift-study-no1 |
-| Eviscerating Angels | Am / Em | Hybrid | ~5 min | q = 76 | Dark, tense | V3Eviscerating_Angels | compositions/eviscerating-angels |
-| Glass Engine | C | Tonality Vault | ~5 min | — | — | V7glass_engine_guitar_string_quartet | compositions/glass-engine |
-| Sylva Fracture | F# Lydian | Wayne Shorter + Zappa | ~5 min | q = 72 | Dramatic narrative | Sylva_Fracture | compositions/sylva-fracture |
-| Sylva Narrative No.2 | D Lydian (modal) | Wayne Shorter + Frisell | ~5 min | q = 72 | Floating, spacious | V5Sylva_Narrative_No2 | compositions/sylva-narrative-no2 |
-| Sylva Sketch 2 | modal / ambiguous | Andrew Hill | ~5 min | q = 88 | Angular, chromatic | Sylva_Sketch_2 | compositions/sylva-sketch-2 |
+| Title | Key | Engine | Duration | Tempo | Mood | Latest Version | Folder | Readability |
+|-------|-----|--------|----------|-------|------|----------------|--------|-------------|
+| Drift Study No.1 | C | Slonimsky / Motif | ~5 min | q = 64 | — | drift_study_no1_guitar_string_quartet | compositions/drift-study-no1 | Partial |
+| Eviscerating Angels | Am / Em | Hybrid | ~5 min | q = 76 | Dark, tense | V3Eviscerating_Angels | compositions/eviscerating-angels | Yes |
+| Glass Engine | C | Tonality Vault | ~5 min | q = 66 | — | V8glass_engine_guitar_string_quartet | compositions/glass-engine | Yes |
+| Sylva Fracture | F# Lydian | Wayne Shorter + Zappa | ~5 min | q = 72 | Dramatic narrative | Sylva_Fracture | compositions/sylva-fracture | Yes |
+| Sylva Narrative No.2 | D Lydian (modal) | Wayne Shorter + Frisell | ~5 min | q = 72 | Floating, spacious | V5Sylva_Narrative_No2 | compositions/sylva-narrative-no2 | Partial |
+| Sylva Sketch 2 | modal / ambiguous | Andrew Hill | ~5 min | q = 88 | Angular, chromatic | Sylva_Sketch_2 | compositions/sylva-sketch-2 | Needs verification |
 
 ---
 
