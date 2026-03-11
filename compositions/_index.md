@@ -22,7 +22,7 @@
 
 4. **Generate MusicXML**
    - Use `prompts/musicxml-generation-template.md`
-   - Output to `[composition-folder]/musicxml/[title]_v01.musicxml`
+   - Output to `[composition-folder]/musicxml/` (increment version for each revision; never overwrite)
 
 5. **Revise**
    - Apply GCE rubric (`rules/gce-rubric.md`)
@@ -33,8 +33,11 @@
    - PDF to `pdf/`
    - Audio to `audio/`
    - Video to `video/`
+   - Generator scripts to `revisions/`
 
 ## Target Folder Structure (per composition)
+
+See `rules/composition-bootstrap-rules.md`. Before generating any composition, ensure this structure exists:
 
 ```
 <piece-folder>/
@@ -43,27 +46,43 @@
   lead-sheet.md
   arrangement-plan.md
   revisions.md
-  musicxml/
-  sibelius/
-  video/
-  pdf/
-  audio/
-  sketches/
   archive/
+  audio/
+  musicxml/
+  pdf/
+  sibelius/
+  sketches/
+  video/
+  revisions/
 ```
+
+- **Musical outputs:** `musicxml/`
+- **Generator scripts:** `revisions/`
 
 ## Active Compositions
 
-| Folder | Title | Asset Types | Latest Version | Readability |
-|--------|-------|-------------|----------------|-------------|
-| drift-study-no1 | Drift Study No.1 | musicxml sibelius video | drift_study_no1_guitar_string_quartet.musicxml | Partial |
-| eviscerating-angels | Eviscerating Angels | musicxml | V3Eviscerating_Angels.musicxml | Yes |
-| glass-engine | Glass Engine | archive musicxml sibelius | V8glass_engine_guitar_string_quartet.musicxml | Yes |
-| sylva-fracture | Sylva Fracture | musicxml | Sylva_Fracture.musicxml | Yes |
-| sylva-narrative-no2 | Sylva Narrative No.2 | musicxml | V5Sylva_Narrative_No2.musicxml | Partial |
-| sylva-sketch-2 | Sylva Sketch 2 | musicxml | Sylva_Sketch_2.musicxml | Needs verification |
-| working-title-01 | working-title-01 | — | — | — |
+| Folder | Title | Asset Types | Latest Version | Notes |
+|--------|-------|-------------|----------------|-------|
+| drift-study-no2 | Drift Study No.2 | musicxml | Drift_Study_No2_Scofield_Holland.musicxml | Scofield–Holland Hybrid |
+| home-engine | Home Engine | musicxml | V9_Home_Engine_Scofield.musicxml | Scofield–Holland + Zappa (D only) |
+| eviscerating-angels | Eviscerating Angels | musicxml sibelius video | V3Eviscerating_Angels.musicxml |  |
+| glass-engine | Glass Engine | archive musicxml sibelius | V9_Glass_Engine_Atmospheric_Master.musicxml | ECM atmospheric |
+| sylva-fracture | Sylva Fracture | musicxml | Sylva_Fracture.musicxml |  |
+| sylva-narrative-no1 | Sylva Narrative No.1 | musicxml | V1_Sylva_Narrative_No1.musicxml | Wayne Shorter Narrative |
+| myrtles-prayer | Myrtle's Prayer | musicxml | V5_Myrtles_Prayer_Final.musicxml | Counterpoint/Tonality + Shorter |
+| sylva-narrative-no2 | Sylva Narrative No2 | musicxml | V6Sylva_Narrative_No2.musicxml |  |
+| sylva-sketch-2 | Sylva Sketch 2 | musicxml | Sylva_Sketch_2.musicxml |  |
+| unreliable-gravity | Unreliable Gravity | musicxml revisions notes lead-sheet arrangement-plan | V2_Unreliable_Gravity_7-4.musicxml | Andrew Hill, 7/4 |
+| the-uncooperative-groove | The Uncooperative Groove | scaffold created | no musicxml yet | Scofield–Zappa Rhythmic Hybrid |
+| labyrinth-of-quiet-motions | Labyrinth of Quiet Motions | musicxml | V1_Labyrinth_of_Quiet_Motions.musicxml | Polyphonic Labyrinth / Counterpoint Hybrid |
+| working-title-01 |  | — | — |  |
 | composition-template | (template) | — | — | Do not use for real compositions |
+
+## Archived Compositions
+
+| Folder | Title | Notes |
+|--------|-------|------|
+| archive/drift-study-no1 | Drift Study No.1 | Retired composition experiment |
 
 ## TODO
 

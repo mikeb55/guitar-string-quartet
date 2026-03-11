@@ -22,4 +22,4 @@ Use the buttons to open the engine prompt, create request templates, browse comp
 
 ## Requirements
 
-This version requires **no Python installation**. It uses only native Windows components (HTA, VBScript, batch).
+This version requires **no Python installation**. It uses native Windows HTA (HTML Application) and runs on standard Windows systems with no external installs.

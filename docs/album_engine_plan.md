@@ -21,7 +21,7 @@ This document defines the album engine architecture for the guitar-string-quarte
 
 ## Overview
 
-The album is built around **four primary composition engines**, each with distinct harmonic, rhythmic, and structural character. Pieces may use one engine exclusively or combine a primary engine with the optional Zappa secondary engine for limited disruptive moments.
+The album is built around **six primary composition engines** (plus optional secondary engines), each with distinct harmonic, rhythmic, and structural character. Pieces may use one engine exclusively or combine a primary engine with the optional Zappa secondary engine for limited disruptive moments.
 
 **Core principle:** Guitar-first generation. The guitar drives harmonic rhythm; strings respond, frame, and contrast.
 
@@ -29,7 +29,9 @@ The album is built around **four primary composition engines**, each with distin
 
 ---
 
-## The Four Engine System
+## The Engine System
+
+**Primary engines:**
 
 | Engine | Character | Best For |
 |--------|-----------|----------|
@@ -37,6 +39,8 @@ The album is built around **four primary composition engines**, each with distin
 | **Wayne Shorter Narrative** | Motif-driven, dramatic arcs, narrative harmony | Sophisticated chamber jazz |
 | **Scofield–Holland Groove** | Syncopated, bass-driven, rhythmically forward | Medium groove, ensemble dialogue |
 | **Counterpoint / Tonality Hybrid** | Independent lines, rotating tonal systems | String-driven, large-scale works |
+| **Wheeler Lyric** | Luminous, floating harmony, emotional transparency | ECM lyric ballads, violin-led melody |
+| **Stravinsky Chamber Pulse** | Rhythmic cells, shifting meters, ensemble gestures | Rhythmically energetic chamber pieces |
 
 ---
 
@@ -131,6 +135,51 @@ The album is built around **four primary composition engines**, each with distin
 
 ---
 
+### 5. Wheeler Lyric Engine
+
+**Characteristics:**
+- Long melodic arcs
+- Lyrical phrasing
+- Slow harmonic drift
+- Emotional openness
+- Transparent orchestration
+
+**Influences:** Kenny Wheeler, ECM lyric writing, ECM chamber jazz orchestration.
+
+**Guitar role:** Colour chords, dyads, quiet harmonic punctuation. Avoid rhythmically aggressive guitar.
+
+**Strings:** Violin I (primary lyrical melody), Violin II (secondary melodic support), Viola (inner harmonic motion), Cello (lyrical bass lines).
+
+**Best for:** Luminous ECM-style ballads, emotionally transparent chamber jazz.
+
+**Album suitability:** 9.4/10
+
+**Full specification:** `engines/wheeler_lyric_engine.md`
+
+---
+
+### 6. Stravinsky Chamber Pulse Engine
+
+**Characteristics:**
+- Rhythmic cells
+- Shifting meters
+- Sudden ensemble gestures
+- Motivic rhythmic development
+
+**Influences:** Stravinsky chamber music, modern chamber jazz, ECM rhythmic ensemble writing.
+
+**Guitar role:** Dyads, rhythmic chords, percussive attacks.
+
+**Strings:** Violin I (rhythmic motif leader), Violin II (counter-rhythm layer), Viola (inner rhythmic motor), Cello (percussive harmonic anchor).
+
+**Best for:** Rhythmically energetic chamber pieces, syncopated ensemble writing.
+
+**Album suitability:** 9.2/10
+
+**Full specification:** `engines/stravinsky_chamber_pulse_engine.md`
+
+---
+
 ## Optional Zappa Secondary Engine
 
 Zappa may be used as a **secondary engine only** (not primary). It contributes:
@@ -164,7 +213,7 @@ To ensure variety across the album:
 4. **Tempo contrast:** Alternate between slow (Frisell, Shorter) and medium groove (Scofield–Holland) where possible.
 5. **Texture contrast:** Alternate between spacious (Frisell, Shorter) and rhythmically active (Scofield–Holland, Counterpoint).
 
-**Suggested rotation order:** Frisell → Shorter → Scofield–Holland → Counterpoint → (repeat)
+**Suggested rotation order:** Frisell → Shorter → Scofield–Holland → Counterpoint → Wheeler Lyric → Stravinsky Chamber Pulse → (repeat)
 
 ---
 
@@ -198,6 +247,8 @@ To ensure variety across the album:
 | Engine menu | `prompts/engine_menu.md` |
 | Guitar-first rule | `rules/guitar-first-composition-rule.md` |
 | Wayne Shorter engine | `rules/wayne-shorter-composition-engine.md` |
+| Wheeler Lyric engine | `engines/wheeler_lyric_engine.md` |
+| Stravinsky Chamber Pulse engine | `engines/stravinsky_chamber_pulse_engine.md` |
 | Dual engine mode | `rules/dual-engine-composition-mode.md` |
 | Score readability standard | `rules/score-readability-standard.md` |
 

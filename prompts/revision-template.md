@@ -54,6 +54,6 @@ Use when revising a composition after GCE evaluation or rehearsal feedback.
 
 ## Next Steps
 
-[ ] Re-export MusicXML (ensure score readability: chord symbols, rehearsal letters, double barlines — see `rules/score-readability-standard.md`)
+[ ] Re-export MusicXML (run pre-export validation — see `rules/musicxml-pre-export-validation.md`; ensure score readability — see `rules/score-readability-standard.md`)
 [ ] Update PDF
 [ ] Log in `revisions.md`

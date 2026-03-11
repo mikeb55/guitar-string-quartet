@@ -20,9 +20,12 @@ Allow compositions to be generated using two compositional engines simultaneousl
 
 - Shorter + Frisell
 - Shorter + Slonimsky
+- Shorter + Zappa (secondary or hybrid — limited sections only)
 - Frisell + Counterpoint
 - Tonality Vault + Counterpoint
 - Hill + Slonimsky
+
+**Zappa as secondary/hybrid:** See Composition_Engine_Guide § Secondary Engine Support (Zappa). Zappa contributes ensemble hits, rhythmic fractures, harmonic collisions, orchestral accents — but must not dominate or replace primary structure; use in development, climax, or contrasting episode only.
 
 ## Generation Logic
 

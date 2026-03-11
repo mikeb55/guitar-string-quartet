@@ -8,8 +8,10 @@
 4. Tonality Vault Engine
 5. Counterpoint Engine
 6. Wayne Shorter Engine
-7. Hybrid Engine
-8. Dual Engine Mode
+7. Wheeler Lyric Engine
+8. Stravinsky Chamber Pulse Engine
+9. Hybrid Engine
+10. Dual Engine Mode
 
 ---
 
@@ -122,6 +124,53 @@ See `rules/wayne-shorter-composition-engine.md` for full specification.
 
 ---
 
+## Wheeler Lyric Engine
+
+### Characteristics
+
+- long melodic arcs
+- lyrical phrasing
+- slow harmonic drift
+- emotional openness
+- transparent orchestration
+
+### Best for
+
+- luminous ECM-style ballads
+- emotionally transparent chamber jazz
+- pieces requiring violin-led lyrical melody
+
+### Album suitability: 9.4/10
+
+**When to use:** Choose Wheeler Lyric when the piece needs Kenny Wheeler–style luminosity, floating harmony, and emotional transparency. Ideal for album tracks that provide lyrical relief between more rhythmically driven or harmonically dense pieces. Use as primary for ballads; use as secondary with Frisell for atmospheric lyricism.
+
+See `engines/wheeler_lyric_engine.md` for full specification.
+
+---
+
+## Stravinsky Chamber Pulse Engine
+
+### Characteristics
+
+- rhythmic cells
+- shifting meters
+- sudden ensemble gestures
+- motivic rhythmic development
+
+### Best for
+
+- rhythmically energetic chamber pieces
+- syncopated ensemble writing
+- pieces requiring rhythmic contrast on the album
+
+### Album suitability: 9.2/10
+
+**When to use:** Choose Stravinsky Chamber Pulse when the piece needs rhythmic drive, shifting meters, and ensemble punch. Ideal for album tracks that provide energy and contrast to more lyrical or atmospheric pieces. Use as primary for rhythm-forward compositions; use as secondary with Zappa for rhythmic + disruptive accents.
+
+See `engines/stravinsky_chamber_pulse_engine.md` for full specification.
+
+---
+
 ## Hybrid Engine
 
 ### Characteristics
@@ -210,3 +259,19 @@ Structure: long arc
 
 Engine: Hybrid
 Rules: preserve asymmetry
+
+---
+
+## 11. Wheeler Lyric
+
+Engine: Wheeler Lyric
+Mood: luminous, transparent
+Texture: violin-led melody, guitar colour
+
+---
+
+## 12. Stravinsky Chamber Pulse
+
+Engine: Stravinsky Chamber Pulse
+Seed: rhythmic cell
+Meter: shifting (e.g. 4/4, 5/4, 7/8)

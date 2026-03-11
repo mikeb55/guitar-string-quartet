@@ -1,0 +1,181 @@
+Create a Wyble arrangement version for one existing composition.
+
+WORKSPACE ROOT
+C:\Users\mike\Documents\Cursor AI Projects\guitar-string-quartet\guitar-string-quartet
+
+SOURCE PIECE
+[REPLACE_THIS_WITH_PIECE_SLUG]
+
+SOURCE MUSICXML
+compositions/[REPLACE_THIS_WITH_PIECE_SLUG]/musicxml/[REPLACE_THIS_WITH_SOURCE_FILE].musicxml
+
+GOAL
+Create a separate Wyble-based arrangement layer for this piece.
+
+This is not a replacement for the main album version.
+This is an alternate performance arrangement built around Jimmy Wyble-style two-line guitar counterpoint.
+
+Do this one piece only.
+Do not touch other compositions.
+
+------------------------------------------------
+STEP 1 - CREATE WYBLE ARRANGEMENT DIRECTORY
+------------------------------------------------
+
+Inside:
+
+compositions/[REPLACE_THIS_WITH_PIECE_SLUG]/
+
+create this folder if missing:
+
+Wyble_Arrangement/
+
+Inside that folder create:
+
+musicxml/
+pdf/
+notes/
+revisions/
+
+------------------------------------------------
+STEP 2 - OUTPUT FILE
+------------------------------------------------
+
+Write the new alternate arrangement to:
+
+compositions/[REPLACE_THIS_WITH_PIECE_SLUG]/Wyble_Arrangement/musicxml/Wyble_[REPLACE_THIS_WITH_SOURCE_FILE].musicxml
+
+------------------------------------------------
+STEP 3 - ARRANGEMENT CONCEPT
+------------------------------------------------
+
+Create a complete Wyble arrangement version of the piece.
+
+Core idea:
+- guitar becomes two-voice contrapuntal engine
+- strings support with light harmonic field, counterlines, or sustained tones
+- arrangement is modular and not necessarily intended to be played straight through
+
+Use rehearsal letters to indicate optional performance modules:
+
+A - Intro
+B - Optional solo / development area
+C - Outro
+
+These sections should be clearly marked in the score and musically usable on their own.
+
+------------------------------------------------
+STEP 4 - WYBLE RULES
+------------------------------------------------
+
+The guitar must use:
+
+- two independent voices
+- contrary motion
+- oblique motion
+- occasional parallel 3rds or 6ths
+- dyads rather than block chords
+- implied harmony from line interaction
+
+Avoid:
+- dense comping
+- thick chord stacks
+- long monophonic stretches unless clearly transitional
+
+------------------------------------------------
+STEP 5 - STRING ROLE RULES
+------------------------------------------------
+
+Strings should not overcrowd the guitar register.
+
+Use strings for:
+- soft sustained harmonic field
+- occasional melodic inheritance from one guitar voice
+- cello pedal or bass contour
+- viola / violin II shadow lines
+- upper violin colour or harmonic halo
+
+Keep the arrangement breathable.
+
+------------------------------------------------
+STEP 6 - REHEARSAL LETTER DESIGN
+------------------------------------------------
+
+Reh. A = Intro
+- 4 to 8 bars
+- guitar two-line counterpoint
+- light string support
+- prepares main material
+
+Reh. B = Optional solo / development area
+- clear harmonic loop, vamp, or development passage
+- suitable for improvisation or free extension
+- guitar can alternate between Wyble counterpoint and single-line improvisation
+
+Reh. C = Outro
+- short closing section
+- thinning texture
+- guitar contrary-motion close
+- strings reduce to sustained colour
+
+------------------------------------------------
+STEP 7 - FORM HANDLING
+------------------------------------------------
+
+Do not destroy the identity of the original piece.
+
+Preserve:
+- core melody
+- harmonic world
+- emotional role
+
+Translate the piece into a Wyble arrangement language without turning it into a different composition.
+
+------------------------------------------------
+STEP 8 - ENGRAVING RULES
+------------------------------------------------
+
+- show time signatures only when they change
+- do not repeat the meter every bar
+- include rehearsal letters A, B, C
+- keep guitar notation readable
+- maintain proper system spacing
+- clean Sibelius-importable MusicXML only
+
+------------------------------------------------
+STEP 9 - SUPPORT FILES
+------------------------------------------------
+
+Create:
+
+compositions/[REPLACE_THIS_WITH_PIECE_SLUG]/Wyble_Arrangement/notes/Wyble_Arrangement_Notes.md
+
+Include:
+- source file used
+- purpose of the arrangement
+- where A, B, and C occur
+- short performance note explaining that the arrangement may be used modularly
+
+------------------------------------------------
+STEP 10 - QUALITY CONTROL
+------------------------------------------------
+
+Evaluate the arrangement for:
+
+- guitar contrapuntal clarity
+- preservation of original identity
+- usefulness of A/B/C modular sections
+- readability
+- ensemble balance
+- idiomatic playability
+
+If weak, revise before output.
+
+------------------------------------------------
+FINAL EXPORT
+------------------------------------------------
+
+Write only these outputs:
+
+1. compositions/[REPLACE_THIS_WITH_PIECE_SLUG]/Wyble_Arrangement/musicxml/Wyble_[REPLACE_THIS_WITH_SOURCE_FILE].musicxml
+2. compositions/[REPLACE_THIS_WITH_PIECE_SLUG]/Wyble_Arrangement/notes/Wyble_Arrangement_Notes.md

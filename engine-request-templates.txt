@@ -3,7 +3,7 @@ Guitar-String-Quartet Engine Request Templates
 ========================================
 
 Copy the template you need and paste into Cursor with the master engine prompt.
-Reference: prompts/master-composition-engine.md
+Reference: prompts\master-composition-engine.md
 
 ========================================
 A. New composition

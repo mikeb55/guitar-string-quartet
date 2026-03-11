@@ -15,9 +15,9 @@ In development — multiple MusicXML versions available.
 
 ## Latest Recommended File
 
-**Open first:** `musicxml/V8glass_engine_guitar_string_quartet.musicxml`
+**Open first:** `musicxml/V9_Glass_Engine_Atmospheric_Master.musicxml`
 
-V8: Readability upgrade — boxed rehearsal letters (A–H), chord symbols, tempo marking, double barlines at section changes.
+V9: ECM Atmospheric Master — dynamic arc, guitar density reduction, inner string differentiation, 3 colour events (violin harm., sul tasto, guitar harmonics).
 
 ## Readability Status
 

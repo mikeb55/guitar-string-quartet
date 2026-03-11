@@ -1,7 +1,7 @@
 # Composition Engine Reference Manual
 
-**Version 1.0**  
-**Last updated:** 2026-03-09
+**Version 1.1**  
+**Last updated:** 2026-03-10
 
 This manual is the central rulebook describing every composition engine used in the guitar-string-quartet project. It is synchronized in both Markdown and Word formats.
 
@@ -15,14 +15,16 @@ This manual is the central rulebook describing every composition engine used in 
 4. [Wayne Shorter Narrative Engine](#4-wayne-shorter-narrative-engine)
 5. [Scofield–Holland Groove Engine](#5-scofieldholland-groove-engine)
 6. [Counterpoint / Tonality Hybrid Engine](#6-counterpoint--tonality-hybrid-engine)
-7. [Zappa Disruption Engine](#7-zappa-disruption-engine)
-8. [Hybrid Engine Strategies](#8-hybrid-engine-strategies)
-9. [Album Rotation Strategy](#9-album-rotation-strategy)
-10. [Score Engraving Standards](#10-score-engraving-standards)
-11. [MusicXML Validation Rules](#11-musicxml-validation-rules)
-12. [Composition Quality Rules (GCE ≥ 9)](#12-composition-quality-rules-gce--9)
-13. [Repository Structure Rules](#13-repository-structure-rules)
-14. [Synchronization Rule](#14-synchronization-rule)
+7. [Wheeler Lyric Engine](#7-wheeler-lyric-engine)
+8. [Stravinsky Chamber Pulse Engine](#8-stravinsky-chamber-pulse-engine)
+9. [Zappa Disruption Engine](#9-zappa-disruption-engine)
+10. [Hybrid Engine Strategies](#10-hybrid-engine-strategies)
+11. [Album Rotation Strategy](#11-album-rotation-strategy)
+12. [Score Engraving Standards](#12-score-engraving-standards)
+13. [MusicXML Validation Rules](#13-musicxml-validation-rules)
+14. [Composition Quality Rules (GCE ≥ 9)](#14-composition-quality-rules-gce--9)
+15. [Repository Structure Rules](#15-repository-structure-rules)
+16. [Synchronization Rule](#16-synchronization-rule)
 
 ---
 
@@ -38,14 +40,20 @@ The repository uses a **modular engine system** to generate compositions for a g
 
 ## 2. Engine Architecture
 
-The system is built around **four primary engines**:
+The system is built around a **master engine palette**:
 
 | Engine | Character |
 |--------|-----------|
-| **Frisell Atmosphere** | Spacious, lyrical, ECM ambience |
-| **Wayne Shorter Narrative** | Motif-driven, dramatic arcs |
 | **Scofield–Holland Groove** | Syncopated, bass-driven, medium tempo |
+| **Wayne Shorter Narrative** | Motif-driven, dramatic arcs |
+| **Frisell Atmosphere** | Spacious, lyrical, ECM ambience |
 | **Counterpoint / Tonality Hybrid** | Independent string voices, chamber counterpoint |
+| **Wheeler Lyric** | Luminous ECM lyricism, floating harmony |
+| **Stravinsky Chamber Pulse** | Rhythmic cells, shifting meters, ensemble gestures |
+| **Zappa Disruption** | Secondary only — ensemble hits, rhythmic fractures |
+| **Slonimsky Harmonic** | Intervallic symmetry, exotic harmonic movement |
+| **Andrew Hill Harmonic** | Asymmetric phrasing, motivic mutation |
+| **Polyphonic Labyrinth** | Dense polyphonic development |
 
 **Zappa** acts as a **secondary disruption engine** — never primary. It contributes ensemble hits, rhythmic fractures, and harmonic collisions in selected sections only.
 
@@ -131,7 +139,64 @@ The system is built around **four primary engines**:
 
 ---
 
-## 7. Zappa Disruption Engine
+## 7. Wheeler Lyric Engine
+
+**Full specification:** `engines/wheeler_lyric_engine.md`
+
+**Characteristics:**
+- Long melodic arcs
+- Lyrical phrasing
+- Slow harmonic drift
+- Emotional openness
+- Transparent orchestration
+
+**Influences:** Kenny Wheeler, ECM lyric writing, ECM chamber jazz orchestration.
+
+**Harmony:** major9, maj7#11, minor9, suspended dominant colours. Avoid dense harmonic clusters.
+
+**Guitar role:** Colour chords, dyads, quiet harmonic punctuation. Avoid rhythmically aggressive guitar writing.
+
+**String roles:**
+- Violin I: Primary lyrical melody
+- Violin II: Secondary melodic support
+- Viola: Inner harmonic motion
+- Cello: Lyrical bass lines
+
+**Structural tendency:** A (lyrical statement) — B (harmonic expansion) — C (emotional climax) — A' (transformed return). Dynamics evolve gradually.
+
+**Best for:** Luminous ECM-style ballads, emotionally transparent chamber jazz.
+
+---
+
+## 8. Stravinsky Chamber Pulse Engine
+
+**Full specification:** `engines/stravinsky_chamber_pulse_engine.md`
+
+**Characteristics:**
+- Rhythmic cells
+- Shifting meters
+- Sudden ensemble gestures
+- Motivic rhythmic development
+
+**Influences:** Stravinsky chamber music, modern chamber jazz, ECM rhythmic ensemble writing.
+
+**Harmony:** Modal, quartal, polychord colours, occasional sharp dissonance. Avoid romantic harmonic language.
+
+**Guitar role:** Dyads, rhythmic chords, percussive attacks.
+
+**String roles:**
+- Violin I: Rhythmic motif leader
+- Violin II: Counter-rhythm layer
+- Viola: Inner rhythmic motor
+- Cello: Percussive harmonic anchor
+
+**Structural tendency:** Intro (rhythmic cell) — A (development) — B (contrasting section) — A' (recombined cell patterns) — Coda (rhythmic dissolution).
+
+**Best for:** Rhythmically energetic chamber pieces, syncopated ensemble writing.
+
+---
+
+## 9. Zappa Disruption Engine
 
 **Role:** Secondary engine only. Never primary.
 
@@ -150,7 +215,7 @@ The system is built around **four primary engines**:
 
 ---
 
-## 8. Hybrid Engine Strategies
+## 10. Hybrid Engine Strategies
 
 Engines can combine while maintaining a clear **primary engine**. The primary engine controls structural logic and melodic development; the secondary engine contributes texture, harmonic vocabulary, or limited disruptive moments.
 
@@ -163,12 +228,14 @@ Engines can combine while maintaining a clear **primary engine**. The primary en
 | Frisell Atmosphere | Counterpoint | Atmospheric + contrapuntal |
 | Wayne Shorter | Frisell | Narrative + spacious |
 | Tonality Vault | Counterpoint | Large-scale + string-driven |
+| Wheeler Lyric | Frisell | Lyric + atmospheric |
+| Stravinsky Chamber Pulse | Zappa | Rhythmic + disruptive accents |
 
 **Validation:** Both engines must influence the final composition. If either engine's influence is weak, regenerate.
 
 ---
 
-## 9. Album Rotation Strategy
+## 11. Album Rotation Strategy
 
 To ensure variety across the album, rotate engines and avoid consecutive pieces with the same character.
 
@@ -193,7 +260,7 @@ To ensure variety across the album, rotate engines and avoid consecutive pieces 
 
 ---
 
-## 10. Score Engraving Standards
+## 12. Score Engraving Standards
 
 Every generated score must include:
 
@@ -207,7 +274,7 @@ Every generated score must include:
 
 ---
 
-## 11. MusicXML Validation Rules
+## 13. MusicXML Validation Rules
 
 Before export, verify:
 
@@ -227,9 +294,11 @@ Before export, verify:
 
 ---
 
-## 12. Composition Quality Rules (GCE ≥ 9)
+## 14. Composition Quality Rules (GCE ≥ 9)
 
-Music must reach **GCE ≥ 9** before export.
+Music must reach **GCE ≥ 9** before export. For **Final Pass** mode, require **GCE ≥ 9.5**.
+
+**Final Pass workflow:** Plan full structure first; verify harmony and orchestration internally; apply engraving rules; validate MusicXML; export only when GCE ≥ 9.5. Do not emit intermediate drafts. See `rules/final-pass-generation-mode.md`.
 
 **Reject pieces that:**
 - Repeat harmonic loops excessively
@@ -242,7 +311,7 @@ Music must reach **GCE ≥ 9** before export.
 
 ---
 
-## 13. Repository Structure Rules
+## 15. Repository Structure Rules
 
 Each composition must follow the **one-piece-one-folder** structure.
 
@@ -265,11 +334,60 @@ compositions/
 
 **Folder naming:** Lowercase with hyphens (e.g. `glass-engine`, `sylva-narrative-no2`).
 
+**Version naming (mandatory):** All new compositions must use format `V{number}_{title}.musicxml`.
+
+- Never overwrite earlier versions
+- Increment version number for every revision
+- Store all versions inside the same piece folder
+
+Example: `V1_Home_Engine_Scofield.musicxml`, `V2_Home_Engine_Scofield.musicxml`
+
 **Full specification:** `rules/one-piece-one-folder.md`
 
 ---
 
-## 14. Synchronization Rule
+### Repository Composition Folder Structure
+
+Every composition must have a folder with identical subdirectories. No files should exist directly in `compositions/`.
+
+**Canonical structure:**
+
+```
+compositions/
+    composition-name/
+        archive/
+        audio/
+        musicxml/
+        pdf/
+        sibelius/
+        sketches/
+        video/
+```
+
+**Where each file type belongs:**
+
+| File Type | Destination |
+|-----------|-------------|
+| MusicXML | musicxml/ |
+| Sibelius | sibelius/ |
+| Exported PDF | pdf/ |
+| Audio bounce | audio/ |
+| Video render | video/ |
+| Draft ideas | sketches/ |
+| Old versions | archive/ |
+
+**When creating a new composition:**
+
+1. Create a folder using kebab-case title.
+2. Create all seven subdirectories inside.
+3. Save files according to type.
+4. Never save files directly inside `compositions/`.
+
+**Full specification:** `rules/composition-folder-structure.md`
+
+---
+
+## 16. Synchronization Rule
 
 **Whenever engines or composition rules change:**
 
@@ -296,9 +414,12 @@ pandoc docs/composition_engine_reference.md -o docs/composition_engine_reference
 | Engine menu | `prompts/engine_menu.md` |
 | Guitar-first rule | `rules/guitar-first-composition-rule.md` |
 | Wayne Shorter engine | `rules/wayne-shorter-composition-engine.md` |
+| Wheeler Lyric engine | `engines/wheeler_lyric_engine.md` |
+| Stravinsky Chamber Pulse engine | `engines/stravinsky_chamber_pulse_engine.md` |
 | Score readability standard | `rules/score-readability-standard.md` |
 | MusicXML pre-export validation | `rules/musicxml-pre-export-validation.md` |
 | GCE rubric | `rules/gce-rubric.md` |
+| Final Pass generation mode | `rules/final-pass-generation-mode.md` |
 | One piece – one folder | `rules/one-piece-one-folder.md` |
 
 ---

@@ -50,6 +50,34 @@ Before exporting any MusicXML, verify:
 
 Run `py scripts/apply-readability-upgrades.py` to add boxed rehearsal letters to existing files.
 
+## One Piece – One Folder Structure
+
+**See `rules/one-piece-one-folder.md` for full specification.**
+
+Each composition has exactly one canonical folder. All versions and related assets remain inside that folder.
+
+**Canonical structure:**
+```
+compositions/
+   piece-name/
+      musicxml/
+      sibelius/
+      video/
+      audio/
+      pdf/
+      sketches/
+      archive/
+      README.md
+      revisions.md
+      notes.md
+```
+
+**Folder naming:** Lowercase, hyphenated (e.g. `glass-engine`, `sylva-narrative-no2`). Do not create multiple folders for versioned files.
+
+**File placement:** .musicxml/.xml → musicxml/; .sib → sibelius/; .mp4/.mov/.wmv → video/; .wav/.mp3/.flac → audio/; .pdf → pdf/; .mid/.txt → sketches/.
+
+---
+
 ## Folder Logic
 
 - **compositions/** — One folder per composition. All versions of the same piece live together.

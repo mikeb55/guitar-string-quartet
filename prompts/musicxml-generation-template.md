@@ -2,9 +2,13 @@
 
 Use when generating MusicXML for guitar and string quartet compositions.
 
+**Final Pass mode:** When in FINAL PASS, plan full structure first, verify harmony and orchestration internally, apply engraving rules, validate MusicXML, and export only when GCE ≥ 9.5. Do not emit intermediate drafts. See `rules/final-pass-generation-mode.md`.
+
 **Guitar-first rule applies:** Generate guitar harmonic material first; build strings around it. See `rules/guitar-first-composition-rule.md`.
 
 **Score readability standard applies:** All scores must follow professional rehearsal chart standards. See `rules/score-readability-standard.md`.
+
+**MusicXML engraving standard applies:** Use correct element types for chord symbols, rehearsal marks, tempo, and dynamics. See `rules/musicxml-engraving-standard.md`.
 
 ## Pre-Generation Checklist
 
@@ -12,6 +16,8 @@ Use when generating MusicXML for guitar and string quartet compositions.
 - [ ] Arrangement plan complete (texture, roles, dynamics)
 - [ ] Score readability standard reviewed (`rules/score-readability-standard.md`)
 - [ ] Engraving rules reviewed (`rules/engraving-rules.md`)
+- [ ] MusicXML engraving standard reviewed (`rules/musicxml-engraving-standard.md`)
+- [ ] MusicXML pre-export validation reviewed (`rules/musicxml-pre-export-validation.md`)
 - [ ] Guitar-first rule reviewed (`rules/guitar-first-composition-rule.md`) — guitar harmonic vocabulary generated before strings
 - [ ] Guitar writing rules reviewed (`rules/guitar-writing-rules.md`) — guitar parts include dyads, triads, harmonic colour; ≥40% polyphonic
 - [ ] Anti-monotony rule reviewed (`rules/anti-monotony-composition-rule.md`)
@@ -59,13 +65,22 @@ Before exporting confirm:
 - [ ] dynamics support the form
 - [ ] articulation marks clarify ensemble hits
 
+## MusicXML Element Validation
+
+Confirm correct notation objects (see `rules/musicxml-engraving-standard.md`):
+
+- [ ] chord symbols use `<harmony>` (not plain text)
+- [ ] rehearsal letters use `<rehearsal>` (not plain text)
+- [ ] no chord symbols encoded as `<words>` or text
+- [ ] no rehearsal letters encoded as `<words>` or text
+
 ---
 
 ## Global Rules (Apply During Generation)
 
 - Do not optimise phrasing.
 - Preserve asymmetry.
-- GCE ≥ 9.0 before output.
+- GCE ≥ 9.5 before output (9.0 minimum; 9.5 for Final Pass).
 - Prioritise musical intelligence over density.
 - Avoid AI-generic patterns.
 - Independent voice movement.
@@ -74,6 +89,27 @@ Before exporting confirm:
 
 ## Output Path
 
-Save to: `compositions/[title]/musicxml/[title]_v01.musicxml`
+Save to: `compositions/[piece-folder]/musicxml/V1_[title].musicxml`
 
-Use the composition folder name (e.g. `glass-engine`, `drift-study-no1`). Do not save to compositions root.
+**Version naming:** Use format `V{number}_{title}.musicxml`. Increment version for each revision; never overwrite earlier versions. Example: `V1_Home_Engine_Scofield.musicxml`, `V2_Home_Engine_Scofield.musicxml`.
+
+Use the composition folder name (e.g. `glass-engine`, `home-engine`). Do not save to compositions root.
+
+**When exporting a new composition (see `rules/composition-folder-structure.md`):**
+
+1. Check if a folder exists for the piece.
+2. If not, create the full directory template: `archive/`, `audio/`, `musicxml/`, `pdf/`, `sibelius/`, `sketches/`, `video/`.
+3. Save the MusicXML into `musicxml/`.
+4. If the version number increases, move previous version to `archive/` if required.
+
+---
+
+## Pre-Export Validation
+
+**Run MusicXML validation rules before export.** See `rules/musicxml-pre-export-validation.md`.
+
+Before writing the final MusicXML file:
+
+1. Run all validation checks from `rules/musicxml-pre-export-validation.md`
+2. If validation fails: regenerate score until valid
+3. Export only when ALL validation checks pass

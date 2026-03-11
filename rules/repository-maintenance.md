@@ -6,13 +6,16 @@
 
 Whenever a new composition is created or a new version is exported:
 
-1. **Create its folder** in `compositions/` (if new)
-2. **Detect its title** from README.md or folder name
-3. **Detect key signature** from MusicXML (`<fifths>`) or lead-sheet when possible
+1. **Detect the base title** from the composition name
+2. **Locate or create the canonical folder** in `compositions/` (see `rules/one-piece-one-folder.md`)
+3. **Place the new file inside the correct subdirectory** (musicxml/, sibelius/, video/, etc.)
+4. **Do not create duplicate folders** — one piece, one folder
+5. **Detect its title** from README.md or folder name
+6. **Detect key signature** from MusicXML (`<fifths>`) or lead-sheet when possible
    - If ambiguous or modal, mark: **modal / ambiguous**
-4. **Detect latest version** — highest version number in `musicxml/` folder
-   - e.g. V3Eviscerating_Angels.musicxml > V2Eviscerating_Angels.musicxml
-5. **Append or update entry** in `docs/Album_Composition_Index.md`
+7. **Detect latest version** — highest version number in `musicxml/` folder
+   - Format: `V{number}_{title}.musicxml` (e.g. V3_Eviscerating_Angels.musicxml > V2_Eviscerating_Angels.musicxml)
+8. **Append or update entry** in `docs/Album_Composition_Index.md`
 
 **If the title already exists:** Update the version and any changed fields (key, tempo, etc.) rather than creating a new row.
 

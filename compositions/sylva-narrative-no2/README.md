@@ -10,21 +10,21 @@ In development — MusicXML generated.
 
 | Type | Files |
 |------|-------|
-| MusicXML | V5Sylva_Narrative_No2.musicxml (latest) |
+| MusicXML | V6Sylva_Narrative_No2.musicxml (latest) |
 
 ## Latest Recommended File
 
-**Open first:** `musicxml/V5Sylva_Narrative_No2.musicxml`
+**Open first:** `musicxml/V6Sylva_Narrative_No2.musicxml`
 
 ## Readability Status
 
 | Element | Present |
 |---------|---------|
-| Chord symbols | Needs addition |
-| Boxed rehearsal letters | Needs addition (A–B–C–D per form) |
-| Double barlines | Needs addition |
-| Tempo marking | Yes |
-| Dynamics | Partial |
+| Chord symbols | Yes (`<harmony>`) |
+| Boxed rehearsal letters | Yes (A–F) |
+| Double barlines | Yes (at section changes) |
+| Tempo marking | Yes (q = 72) |
+| Dynamics | Yes |
 
 ## Engines
 

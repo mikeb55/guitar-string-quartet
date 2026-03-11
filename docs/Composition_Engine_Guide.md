@@ -43,7 +43,7 @@ New pieces should begin by selecting an engine from the engine menu rather than 
 4. Fill in the fields (piece name, key, tempo, form, motif seed, etc.)
 5. Run the composition generation
 
-**Engine menu options:** Frisell Atmosphere, Wayne Shorter, Slonimsky Harmonic, Andrew Hill, Counterpoint, Tonality Vault, Hybrid, Wayne Shorter + Zappa, Frisell + Counterpoint, Shorter + Slonimsky.
+**Engine menu options:** Frisell Atmosphere, Wayne Shorter, Scofield–Holland Groove, Counterpoint Tonality Hybrid, Wheeler Lyric, Stravinsky Chamber Pulse, Slonimsky Harmonic, Andrew Hill, Polyphonic Labyrinth, Tonality Vault, Hybrid, Wayne Shorter + Zappa, Frisell + Counterpoint, Wheeler Lyric + Frisell, Stravinsky Chamber Pulse + Zappa.
 
 **Helper:** See `tools/start_new_piece.md` for step-by-step instructions.
 
@@ -134,6 +134,39 @@ New pieces should begin by selecting an engine from the engine menu rather than 
 
 ---
 
+### Wheeler Lyric Engine
+
+**Characteristics:**
+- Long melodic arcs
+- Lyrical phrasing
+- Slow harmonic drift
+- Emotional openness
+- Transparent orchestration
+
+**Best for:** Luminous ECM-style ballads, emotionally transparent chamber jazz
+
+**Album suitability:** 9.4/10
+
+**Full specification:** `engines/wheeler_lyric_engine.md`
+
+---
+
+### Stravinsky Chamber Pulse Engine
+
+**Characteristics:**
+- Rhythmic cells
+- Shifting meters
+- Sudden ensemble gestures
+- Motivic rhythmic development
+
+**Best for:** Rhythmically energetic chamber pieces, syncopated ensemble writing
+
+**Album suitability:** 9.2/10
+
+**Full specification:** `engines/stravinsky_chamber_pulse_engine.md`
+
+---
+
 ## Dual Engine Mode
 
 **Full specification:** `rules/dual-engine-composition-mode.md`
@@ -169,6 +202,8 @@ If either engine influence is weak, regenerate.
 - Frisell + Counterpoint
 - Tonality Vault + Counterpoint
 - Hill + Slonimsky
+- Wheeler Lyric + Frisell
+- Stravinsky Chamber Pulse + Zappa
 
 ---
 

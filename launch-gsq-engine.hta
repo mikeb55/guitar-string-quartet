@@ -1,124 +1,186 @@
 <html>
 <head>
 <title>Launch Guitar-String-Quartet Engine</title>
-<HTA:APPLICATION ID="GSQLauncher"
+<HTA:APPLICATION
+  ID="GSQLauncher"
   APPLICATIONNAME="Launch Guitar-String-Quartet Engine"
   BORDER="thin"
+  BORDERSTYLE="normal"
   CAPTION="yes"
+  ICON=""
+  MAXIMIZEBUTTON="no"
+  MINIMIZEBUTTON="yes"
   SHOWINTASKBAR="yes"
   SINGLEINSTANCE="no"
   SYSMENU="yes"
   WINDOWSTATE="normal"
+  INNERBORDER="no"
   SCROLL="no"
-  INNERBORDER="yes"
-  MAXIMIZEBUTTON="no"
-  MINIMIZEBUTTON="yes"
 />
 <style>
-  body { font-family: Segoe UI, Tahoma, sans-serif; font-size: 11px; margin: 20px; background: #f5f5f5; }
-  h2 { margin: 0 0 4px 0; font-size: 14px; }
-  .sub { color: #666; margin-bottom: 16px; font-size: 10px; }
-  .btn { display: block; width: 260px; margin: 6px auto; padding: 8px; font-size: 11px; cursor: pointer; }
-  .status { margin-top: 16px; padding: 6px; background: #e8e8e8; font-size: 10px; color: #444; }
+  body {
+    font-family: Segoe UI, Tahoma, sans-serif;
+    font-size: 12px;
+    margin: 20px;
+    background: #f5f5f5;
+  }
+  h1 {
+    font-size: 16px;
+    margin: 0 0 4px 0;
+    color: #333;
+  }
+  .sub {
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 16px;
+  }
+  .root {
+    font-size: 10px;
+    color: #888;
+    margin-bottom: 12px;
+    word-break: break-all;
+  }
+  .btn {
+    display: block;
+    width: 280px;
+    margin: 4px auto;
+    padding: 8px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  .btn:hover {
+    background: #e8f4fc;
+    border-color: #0078d4;
+  }
+  .btn-exit {
+    margin-top: 12px;
+    background: #f0f0f0;
+  }
+  #status {
+    margin-top: 16px;
+    font-size: 11px;
+    color: #666;
+  }
 </style>
 </head>
 <body>
-<center>
-  <h2>Guitar-String-Quartet Composition Engine</h2>
-  <p class="sub">Menu launcher for the master composition engine</p>
-  <div id="buttons">
-    <button class="btn" onclick="openFile('prompts\\master-composition-engine.md')">Open Master Engine Prompt</button>
-    <button class="btn" onclick="openFile('README.md')">Open Repo README</button>
-    <button class="btn" onclick="openFile('compositions\\_index.md')">Open Composition Index</button>
-    <button class="btn" onclick="createCurrentRequest()">Create Current Engine Request</button>
-    <button class="btn" onclick="openFile('engine-request-templates.txt')">Open Request Templates</button>
-    <button class="btn" onclick="openFolder('compositions')">Open Compositions Folder</button>
-    <button class="btn" onclick="openFolder('rules')">Open Rules Folder</button>
-    <button class="btn" onclick="openFolder('prompts')">Open Prompts Folder</button>
-    <button class="btn" onclick="openFolder('references')">Open References Folder</button>
-    <button class="btn" onclick="openFolder('scratch')">Open Scratch Folder</button>
-    <button class="btn" onclick="window.close()">Exit</button>
-  </div>
-  <div id="status" class="status">Status: Ready</div>
-</center>
+<h1>Guitar-String-Quartet Composition Engine</h1>
+<p class="sub">Menu launcher for the master composition engine</p>
+<p class="root" id="rootInfo">Repository root: (detecting...)</p>
+<div id="buttons">
+  <button class="btn" onclick="OpenMasterEngine()">Open Master Engine Prompt</button>
+  <button class="btn" onclick="OpenReadme()">Open Repo README</button>
+  <button class="btn" onclick="OpenCompositionIndex()">Open Composition Index</button>
+  <button class="btn" onclick="CreateCurrentRequest()">Create Current Engine Request</button>
+  <button class="btn" onclick="OpenRequestTemplates()">Open Request Templates</button>
+  <button class="btn" onclick="OpenFolder('compositions')">Open Compositions Folder</button>
+  <button class="btn" onclick="OpenFolder('rules')">Open Rules Folder</button>
+  <button class="btn" onclick="OpenFolder('prompts')">Open Prompts Folder</button>
+  <button class="btn" onclick="OpenFolder('references')">Open References Folder</button>
+  <button class="btn" onclick="OpenFolder('scratch')">Open Scratch Folder</button>
+  <button class="btn btn-exit" onclick="window.close()">Exit</button>
+</div>
+<p id="status">Status: Ready</p>
 
-<script type="text/vbscript">
-' Get repo root from HTA file location
-Function GetRepoRoot()
-  Dim path, fso
+<script language="VBScript">
+Dim repoRoot, fso, shell
+
+Sub Init()
   Set fso = CreateObject("Scripting.FileSystemObject")
-  path = Replace(window.location.pathname, "/", "\")
-  If Left(path, 1) = "\" Then path = Mid(path, 2)
-  GetRepoRoot = fso.GetParentFolderName(path)
+  Set shell = CreateObject("WScript.Shell")
+  repoRoot = GetHTADirectory()
+  document.getElementById("rootInfo").innerText = "Repository root: " & repoRoot
+End Sub
+
+Function GetHTADirectory()
+  Dim url, path
+  url = document.location.href
+  url = Replace(url, "file:///", "")
+  url = Replace(url, "file://", "")
+  url = Replace(url, "/", "\")
+  GetHTADirectory = fso.GetParentFolderName(url)
 End Function
 
-Sub setStatus(msg)
+Sub SetStatus(msg)
   document.getElementById("status").innerText = "Status: " & msg
 End Sub
 
-Sub openFile(relPath)
-  Dim fso, shell, fullPath, repoRoot
-  Set fso = CreateObject("Scripting.FileSystemObject")
-  Set shell = CreateObject("WScript.Shell")
-  repoRoot = GetRepoRoot()
+Sub OpenFile(relPath)
+  Dim fullPath
   fullPath = fso.BuildPath(repoRoot, relPath)
   If fso.FileExists(fullPath) Then
-    shell.Run """" & fullPath & """", 1, False
-    setStatus "Opened: " & relPath
+    shell.Run Chr(34) & fullPath & Chr(34), 1, False
+    SetStatus "Opened: " & relPath
   Else
     MsgBox "File not found:" & vbCrLf & relPath, 48, "Error"
-    setStatus "Error: " & relPath & " not found"
+    SetStatus "Error: " & relPath & " not found"
   End If
 End Sub
 
-Sub openFolder(relPath)
-  Dim fso, shell, fullPath, repoRoot
-  Set fso = CreateObject("Scripting.FileSystemObject")
-  Set shell = CreateObject("WScript.Shell")
-  repoRoot = GetRepoRoot()
+Sub OpenFolder(relPath)
+  Dim fullPath
   fullPath = fso.BuildPath(repoRoot, relPath)
   If fso.FolderExists(fullPath) Then
-    shell.Run "explorer.exe """ & fullPath & """", 1, False
-    setStatus "Opened: " & relPath
+    shell.Run "explorer.exe " & Chr(34) & fullPath & Chr(34), 1, False
+    SetStatus "Opened: " & relPath
   Else
     MsgBox "Folder not found:" & vbCrLf & relPath, 48, "Error"
-    setStatus "Error: " & relPath & " not found"
+    SetStatus "Error: " & relPath & " not found"
   End If
 End Sub
 
-Sub createCurrentRequest()
-  Dim fso, shell, repoRoot, templatePath, outputPath, ts, content
-  Set fso = CreateObject("Scripting.FileSystemObject")
-  Set shell = CreateObject("WScript.Shell")
-  repoRoot = GetRepoRoot()
+Sub OpenMasterEngine()
+  OpenFile "prompts\master-composition-engine.md"
+End Sub
+
+Sub OpenReadme()
+  OpenFile "README.md"
+End Sub
+
+Sub OpenCompositionIndex()
+  OpenFile "compositions\_index.md"
+End Sub
+
+Sub CreateCurrentRequest()
+  Dim templatePath, outputPath, content, stream
   templatePath = fso.BuildPath(repoRoot, "current-engine-request-template.md")
   outputPath = fso.BuildPath(repoRoot, "current-engine-request.md")
   If Not fso.FileExists(templatePath) Then
-    MsgBox "current-engine-request-template.md not found.", 48, "Error"
-    setStatus "Error: template not found"
+    MsgBox "Template not found: current-engine-request-template.md", 48, "Error"
+    SetStatus "Error: template not found"
     Exit Sub
   End If
   On Error Resume Next
-  Set ts = fso.OpenTextFile(templatePath, 1, False, 0)
+  Set stream = fso.OpenTextFile(templatePath, 1, False, -1)
+  content = stream.ReadAll
+  stream.Close
   If Err.Number <> 0 Then
-    MsgBox "Could not read template: " & Err.Description, 48, "Error"
-    setStatus "Error: " & Err.Description
+    MsgBox "Error reading template: " & Err.Description, 48, "Error"
+    SetStatus "Error: " & Err.Description
     Exit Sub
   End If
-  content = ts.ReadAll
-  ts.Close
-  Set ts = fso.CreateTextFile(outputPath, True)
-  ts.Write content
-  ts.Close
+  Set stream = fso.OpenTextFile(outputPath, 2, True, -1)
+  stream.Write content
+  stream.Close
   If Err.Number <> 0 Then
-    MsgBox "Could not write file: " & Err.Description, 48, "Error"
-    setStatus "Error: " & Err.Description
+    MsgBox "Error writing file: " & Err.Description, 48, "Error"
+    SetStatus "Error: " & Err.Description
     Exit Sub
   End If
-  shell.Run """" & outputPath & """", 1, False
-  setStatus "Created and opened: current-engine-request.md"
+  On Error GoTo 0
+  shell.Run Chr(34) & outputPath & Chr(34), 1, False
+  SetStatus "Created and opened: current-engine-request.md"
   MsgBox "current-engine-request.md created and opened.", 64, "Success"
 End Sub
+
+Sub OpenRequestTemplates()
+  OpenFile "engine-request-templates.txt"
+End Sub
+
+Call Init()
 </script>
 </body>
 </html>

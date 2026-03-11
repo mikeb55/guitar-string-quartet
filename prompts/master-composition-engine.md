@@ -18,6 +18,12 @@ It is system-wide and reusable across the whole repository.
 
 ---
 
+## Composition Bootstrap
+
+Before generating any composition, ensure the canonical folder structure exists. See `rules/composition-bootstrap-rules.md`. Create if missing: `archive/`, `audio/`, `musicxml/`, `pdf/`, `sibelius/`, `sketches/`, `video/`, `revisions/`, plus root docs (`README.md`, `notes.md`, `lead-sheet.md`, `arrangement-plan.md`, `revisions.md`). Write musical outputs to `musicxml/`, generator scripts to `revisions/`.
+
+---
+
 ## Available Composition Engines
 
 The system now supports multiple composition engines.
@@ -26,13 +32,20 @@ Engines determine the harmonic, melodic, and structural logic used to generate p
 
 **Available engines:**
 
+- Scofield–Holland Groove Engine
+- Wayne Shorter Narrative Engine
 - Frisell Atmosphere Engine
+- Counterpoint Tonality Hybrid Engine
+- Wheeler Lyric Engine
+- Stravinsky Chamber Pulse Engine
+- Zappa Disruption Engine (secondary only)
 - Slonimsky Harmonic Engine
-- Andrew Hill Engine
+- Andrew Hill Harmonic Engine
+- Polyphonic Labyrinth Engine
 - Tonality Vault Engine
-- Counterpoint Engine
-- Wayne Shorter Engine
 - Hybrid Engine
+
+Engines may be used as **primary** (form, melody) or **secondary** (harmony, texture). Wheeler Lyric and Stravinsky Chamber Pulse are available as both primary and secondary hybrid engines.
 
 The user may specify the engine in the `current-engine-request.md` file.
 
@@ -507,6 +520,19 @@ Available outputs:
 
 ---
 
+## Composition Folder Structure (Export Rule)
+
+**When exporting a new composition (see `rules/composition-folder-structure.md`):**
+
+1. Check if a folder exists for the piece.
+2. If not, create the full directory template: `archive/`, `audio/`, `musicxml/`, `pdf/`, `sibelius/`, `sketches/`, `video/`.
+3. Save the MusicXML into `musicxml/`.
+4. If the version number increases, move previous version to `archive/` if required.
+
+Never save files directly inside `compositions/`.
+
+---
+
 ## MusicXML Rules
 
 When output type = MusicXML:
@@ -623,6 +649,7 @@ If output type = MusicXML:
 - **Guitar-first validation:** Before output, verify the guitar part includes dyads, triads or chord fragments, harmonic punctuation, and a non-monophonic structural role. If not, regenerate.
 - **Anti-monotony validation:** Before output, verify motif repetition ≤ allowed limits, texture variation present, and at least three structural phases. If not, regenerate.
 - **Score readability validation:** Before output, verify chord symbols above guitar staff, boxed rehearsal letters at sections, double barlines at transitions, tempo marking, and dynamics. See `rules/score-readability-standard.md`. If any element is missing, add before export.
+- **MusicXML pre-export validation:** Run all checks in `rules/musicxml-pre-export-validation.md` before export. If validation fails, regenerate score until valid. Export only when ALL validation checks pass. Applies to new compositions, revised versions, and engine-generated scores.
 
 ---
 

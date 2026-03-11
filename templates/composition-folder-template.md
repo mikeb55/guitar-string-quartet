@@ -1,40 +1,40 @@
 # Composition Folder Template
 
-Use this structure when creating a new composition folder.
+Use this structure when creating a new composition folder. See `rules/composition-bootstrap-rules.md`.
 
-**Guitar-first rule applies:** Compositions are generated with guitar harmonic material first; strings built around it. See `rules/guitar-first-composition-rule.md`.
-
-**Anti-monotony rule applies:** Motifs evolve; texture changes every 6 bars; at least three structural phases. See `rules/anti-monotony-composition-rule.md`.
-
-**Score readability standard applies:** All MusicXML exports must include chord symbols, boxed rehearsal letters, and rehearsal-friendly layout. See `rules/score-readability-standard.md`.
-
-## Required Files
+## Required Structure
 
 ```
-compositions/[title]/
-├── README.md           — Brief description, key, form
-├── notes.md            — Ideas, sketches, development notes
-├── lead-sheet.md       — Melody, chords, form
-├── arrangement-plan.md — Texture, roles, orchestration plan
-├── revisions.md        — Revision log
-├── exports/
-│   ├── musicxml/       — MusicXML files
-│   ├── pdf/            — Rendered scores
-│   └── audio/          — Recordings, mockups
-└── sketches/          — Motif sketches, harmonic drafts
+compositions/[piece-slug]/
+├── README.md
+├── notes.md
+├── lead-sheet.md
+├── arrangement-plan.md
+├── revisions.md
+├── archive/
+├── audio/
+├── musicxml/
+├── pdf/
+├── sibelius/
+├── sketches/
+├── video/
+└── revisions/
 ```
+
+## Output Locations
+
+- **Musical outputs:** `compositions/[piece-slug]/musicxml/`
+- **Generator scripts:** `compositions/[piece-slug]/revisions/`
 
 ## Creation Steps
 
-1. Copy `compositions/composition-template/` to `compositions/[title]/`
-2. Rename and update README.md with composition-specific info
-3. Fill notes.md with initial ideas
-4. Develop lead-sheet.md
-5. Complete arrangement-plan.md
-6. Generate MusicXML to musicxml/
-7. Log revisions in revisions.md
-8. **Update `docs/Album_Composition_Index.md`** — add or update the composition row (see `rules/repository-maintenance.md`)
+1. Copy `compositions/composition-template/` to `compositions/[piece-slug]/`
+2. Rename and update README.md
+3. Fill notes.md, lead-sheet.md, arrangement-plan.md
+4. Generate MusicXML to `musicxml/`
+5. Log revisions in `revisions.md`
+6. Place generator scripts in `revisions/`
 
 ## Naming Convention
 
-Use lowercase, hyphenated titles (e.g. `mist-over-still-waters`, `first-light`).
+Use lowercase, hyphenated slugs (e.g. `mist-over-still-waters`, `first-light`).
